@@ -1,0 +1,514 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --mörkgron: rgb(36, 53, 43);
+  --röd: rgb(143, 47, 47);
+  --beige: rgb(238, 231, 218);
+  --ljus: rgb(250, 248, 243);
+
+  --padding: 20px;
+}
+
+/* Stor bild på startsidan som täcker hela bredden */
+.hero-bild {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Stilen som gäller hela sidan */
+body {
+  background-color: var(--beige);
+  color: var(--mörkgron);
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* Containern jag har gjort håller mitt innehåll samlat */
+.container {
+  width: 100%;
+  padding: var(--padding);
+  box-sizing: border-box; /* gör så padding räknas in i bredden */
+}
+
+header {
+  display: flex;
+  align-items: center; /* centrerar innehållet i höjdled medans flex är row/standard. Annars vågrätt*/
+  justify-content: space-around; /* lägger mellanrum runt innehållet */
+  background-color: var(--mörkgron);
+  color: var(--beige);
+  padding: var(--padding);
+}
+
+header a {
+  text-decoration: none;
+  color: var(--beige);
+  transition: 1s;
+}
+
+header a:hover {
+  color: var(--röd);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+}
+
+/* Gör nav till positionen som mobilmenyn utgår ifrån */
+nav {
+  position: relative;
+}
+
+/* Gömmer checkboxen eftersom jag bara använder den för att öppna och stänga mobilmenyn */
+#menu-toggle {
+  display: none;
+}
+
+/* Stylar hamburgarikonen som användaren trycker på */
+.menu-icon {
+  font-size: 35px;
+  background-color: var(--mörkgron);
+  color: var(--beige);
+  cursor: pointer;
+}
+
+/* Gömmer länkarna i min nav tills jag trycker på hamburgarikonen */
+nav ul {
+  display: none;
+}
+
+/* När checkboxen är ikryssad visas länkarna */
+#menu-toggle:checked ~ ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: absolute;
+  right: 20px;
+  background-color: var(--mörkgron);
+  padding: var(--padding);
+  border-radius: 25px;
+}
+
+nav a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--beige);
+}
+
+.hem {
+  display: flex;
+  flex-direction: column; /* pga mobile först så vill jag ha innehållet under varandra */
+}
+
+h2 {
+  text-align: center;
+  padding: var(--padding);
+  font-size: 1.5rem;
+  border-bottom: 1px solid var(--mörkgron);
+}
+
+.hem p {
+  text-align: center;
+  padding: var(--padding);
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+/* Gör bilden mindre än hela skärmen och centrerar den */
+.hem img {
+  width: 80%;
+  margin: auto;
+}
+
+.hem .knappar {
+  display: flex;
+  justify-content: space-around;
+  padding: var(--padding);
+}
+
+.knappar a {
+  text-align: center;
+  border: solid var(--mörkgron);
+  padding: var(--padding);
+  border-radius: 25px;
+  background-color: var(--mörkgron);
+  text-decoration: none;
+  color: var(--beige);
+  /* Gör så min hover sker mjukt under den tid jag väljer */
+  transition: 1.5s;
+}
+
+/* :hover händer när jag håller musen över knappen */
+.knappar a:hover {
+  /* Ett negativt värde på Y flyttar knappen uppåt */
+  transform: translateY(-10px);
+  /* Byter samtidigt färg på knappen */
+  background-color: var(--röd);
+  /* Effekt visar att man tydligt kan klicka */
+  cursor: pointer;
+}
+
+.atmosfär p {
+  text-align: center;
+  padding: var(--padding);
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+.slider {
+  display: flex;
+  overflow-x: auto; /* gör så jag kan scrolla åt sidan */
+  scroll-snap-type: x mandatory; /* gör så scrollen stannar vid en bild */
+  scroll-behavior: smooth;
+}
+
+.slider img {
+  height: 300px;
+  width: 100%;
+  flex-shrink: 0; /* gör så flexbox inte trycker ihop bilderna */
+  object-fit: cover;
+  scroll-snap-align: start; /* varje bild blir en punkt där scrollen stannar */
+}
+
+.slider-container {
+  position: relative;
+}
+
+/* En liten ruta för att förstå att man kan swipa bilderna */
+.slider-pilar {
+  position: absolute;
+  bottom: 5px;
+  right: 0px;
+  border: solid;
+  background-color: rgba(238, 231, 218, 0.85);
+  border-radius: 25px;
+  color: var(--mörkgron);
+}
+
+.info p {
+  text-align: center;
+  padding: var(--padding);
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+.omoss img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+footer {
+  background-color: var(--mörkgron);
+  color: var(--beige);
+  text-align: center;
+}
+
+.socials,
+.öppettider,
+.kontakt {
+  padding: var(--padding);
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 5px;
+  text-decoration: underline;
+}
+
+footer h3 {
+  font-size: 1.3rem;
+}
+
+.socialknappar {
+  display: flex;
+  justify-content: center; /* flyttar dem i main axel */
+  gap: 20px;
+}
+
+.socialknappar img {
+  width: 50px;
+  height: 45px;
+  object-fit: contain;
+  transition: 1.5s;
+}
+
+.socialknappar img:hover {
+  transform: rotate(360deg);
+  cursor: pointer;
+}
+
+.öppettider {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Jag bytte från en lista till table, fick lite problem med att avståndet blev stort */
+.öppettider table {
+  line-height: 1.5rem;
+  width: fit-content; /* Jag fixade det med hjälp av fit-content och center */
+  align-self: center;
+}
+
+/* Men dem kom för nära varandra */
+
+.öppettider td {
+  padding: 0 8px; /* Extra padding inne i elementet 0 upp/ner och 8 vänster/höger */
+}
+
+.kontakt {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.kontakt a {
+  text-decoration: none;
+  color: var(--beige);
+  transition: 1.5s;
+}
+
+.kontakt a:hover {
+  color: var(--röd);
+  cursor: pointer;
+}
+
+
+/* Meny sidan */
+
+.menyinfo h2 {
+  font-size: 2rem;
+}
+
+/* Har gjort så att menyn ser ut som en resturang meny */
+.menyinfo {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: var(--röd);
+  color: var(--beige);
+  padding: 30px;
+  border-radius: 25px;
+}
+
+.grid-mat img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+/* Grid för att samla maträtterna */
+.grid-mat {
+  display: grid;
+  gap: 20px;
+}
+
+/* Egen grid för varje maträtt bilden till vänster och texten till höger */
+.maträtt {
+  display: grid;
+  grid-template-columns: 200px 1fr; /* 200px till bilden och resten till texten */
+  gap: 15px;
+  border-bottom: 1px solid var(--mörkgron);
+  padding-bottom: 30px;
+}
+
+.pris {
+  font-weight: bold;
+}
+
+/* > gör så jag bara ändrar h3 och inte namnen på maträtterna */
+.förrätter > h3,
+.varmrätter > h3,
+.desserter > h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Boka sidan */
+
+.bordsbokning h2 {
+  font-size: 1.7rem;
+  color: var(--beige);
+  background-color: var(--mörkgron);
+  width: fit-content;
+  margin: auto;
+  border-radius: 15px;
+}
+
+.bokningsdel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 75%;
+  margin: auto;
+  padding: var(--padding);
+}
+
+.bokningsdel label {
+  font-size: 1.2rem;
+  color: var(--beige);
+  background-color: var(--mörkgron);
+  width: fit-content;
+  border-radius: 15px;
+  font-weight: bold;
+  padding: 8px;
+}
+
+.bokningsdel input {
+  height: 35px;
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+#övrigt {
+  height: 75px;
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+.bokningsdel button {
+  width: 150px;
+  height: 50px;
+  margin: auto;
+  background-color: var(--röd);
+  color: var(--beige);
+  font-size: 1.5rem;
+  border-radius: 25px;
+  border-color: var(--röd);
+  transition: 0.5s;
+}
+
+.bokningsdel button:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* Bild som bakgrund */
+.bordsbokning {
+  background-image: url(../images/vinglas.webp);
+  background-size: cover;
+  background-position: center;
+  border: solid 10px var(--mörkgron);
+  border-radius: 15px;
+  padding: var(--padding);
+}
+
+/* Desktop */
+/* width >= 768px*/
+@media (min-width: 768px) {
+
+  /* Tar bort hamburgaren */
+  .menu-icon {
+    display: none;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 35px;
+  }
+
+  header > a {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+
+  /* Nu när det är större skärm måste jag ändra max width och sätta något som inte blir för stort iheller */
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  /* På stor skärm ändrar column till row */
+  .hem {
+    flex-direction: row;
+  }
+
+  /* Delar upp första delen så texten och bilden tar halva bredden var */
+  .hemtext,
+  .hem img {
+    width: 50%;
+  }
+
+  .knappar {
+    gap: 20px;
+  }
+
+  .knappar a {
+    width: 50%;
+    font-size: 1.5rem;
+  }
+
+  /* Ingen swipe på desktop istället 3 bilder som delar på 100% ytan = 33% */
+  .slider img {
+    height: 500px;
+    width: 33%;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .hem p,
+  .atmosfär p,
+  .omoss p {
+    font-size: 1.3rem;
+  }
+
+  /* Footern blir flex och dem 3 delarna kommer bredvid varandra */
+  footer .container {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  /* På större skärmar lägger tre maträtter bredvid varandra */
+  .grid-mat {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  /* Ändrar 200px 1fr från mobilversionen till 1fr.  */
+  .maträtt {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-mat img {
+    height: 250px;
+  }
+
+  .matinfo {
+    text-align: center;
+  }
+
+  .matinfo h3 {
+    font-size: 1.5rem;
+  }
+
+  .pris {
+    font-size: 1.2rem;
+  }
+
+  .menyinfo p {
+    font-size: 1.2rem;
+  }
+
+  .förrätter > h3,
+  .varmrätter > h3,
+  .desserter > h3 {
+    text-align: center;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    font-size: 1.7rem;
+  }
+
+  .menyinfo > h2 {
+    font-size: 2.2rem;
+  }
+
+  /* Ingen swipe funktion på desktop*/
+  .slider-pilar {
+    display: none;
+  }
+}

@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Ord som beskriver sidan för sökmotorer, läste dock att det inte används -->
+    <meta
+      name="keywords"
+      content="restaurang, krog, pub, plankstek, fotboll, Tygelsjö, mat, Vellinge, La Bella, öl, burgare, hamburgare"
+    />
+    <link rel="icon" href="images/logo.png" />
+    <link rel="stylesheet" href="style/style.css" />
+
+    <title>La Bella Krog</title>
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html">
+        <h1>La Bella Krog</h1>
+      </a>
+
+      <nav>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <ul>
+          <!-- Länk till meny -->
+          <li><a href="meny.html">Meny</a></li>
+
+          <!-- #omoss hoppar till elementet som har id="omoss" -->
+          <li><a href="#omoss">Om oss</a></li>
+
+          <!-- Länk till bokningssida -->
+          <li><a href="boka.html">Boka</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Stor bild som täcker hela bredden på startsidan -->
+      <img class="hero-bild" src="images/lokal.webp" alt="Öl på La Bella Krog" />
+
+      <!-- Container för att hålla ihop innehållet så jag enkelt kan använda CSS -->
+      <div class="container">
+        <section class="hem">
+          <div class="hemtext">
+            <h2>EN PLATS FÖR MINNESVÄRDA STUNDER OCH GOD MAT</h2>
+
+            <p>
+              Välkommen till vår stämningsfulla och charmiga restaurang, där
+              varje besök blir en upplevelse för dina sinnen. Vi välkomnar dig
+              att slå dig ner i en varm och trivsam miljö – idealisk för både
+              små och stora tillfällen. Vår kärlek till matlagning genomsyrar
+              varje rätt vi serverar – en smakresa som sprider glädje och väcker
+              inspiration.
+            </p>
+
+            <!-- Div för att kunna styla knapparna tillsammans i CSS -->
+            <div class="knappar">
+              <a href="meny.html">MENY</a>
+              <a href="boka.html">BOKA</a>
+            </div>
+          </div>
+          <img src="images/öl.webp" alt="bild på en öl" />
+        </section>
+
+        <section class="atmosfär">
+          <h2>Upplev atmosfären på La Bella</h2>
+          <p>
+            Kika in i vår värld av dämpad belysning, rustika detaljer och en
+            varm, välkomnande miljö.
+          </p>
+
+          <div class="slider-container">
+            <!-- Slider till bilder-->
+            <div class="slider">
+              <img
+                src="images/neonlampor.jpeg"
+                alt="Neonlampor i restaurangen"
+              />
+              <img src="images/öl.webp" alt="Öl på La Bella" />
+              <img src="images/öl på tapp.jpeg" alt="Öl på tapp" />
+            </div>
+            <!-- Visar att bilderna går att dra åt sidan -->
+            <p class="slider-pilar">Swipa Bilderna</p>
+          </div>
+        </section>
+
+        <!-- id="omoss" är hit länken #omoss i nav går -->
+        <section class="omoss" id="omoss">
+          <div class="info">
+            <h2>Hjärtat i La Bella</h2>
+
+            <p>
+              Hos oss handlar det inte bara om att äta – det handlar om att
+              uppleva. Vårt koncept bygger på en kombination av god mat,
+              omtänksam service och en trivsam miljö där alla ska känna sig
+              välkomna.
+              <br /><br />
+
+              Vi tar avstamp i traditionella smaker men vågar också tänka nytt.
+              Menyn är noggrant sammansatt med fokus på råvaror av hög kvalitet
+              och rätter som tillagas med hjärta och hantverk. Oavsett om du är
+              sugen på något klassiskt eller vill upptäcka nya
+              smakkombinationer, finns det något för dig hos oss.
+              <br /><br />
+
+              Vi tror på helheten – från första mötet till sista tuggan. Därför
+              är stämningen i lokalen, bemötandet från personalen och känslan i
+              varje detalj minst lika viktig som maten på tallriken.
+              <br /><br />
+
+              Vår ambition är att skapa en plats dit du gärna kommer tillbaka,
+              oavsett om det är för en vardagslunch, en kväll med vänner eller
+              en speciell högtid. En restaurang där kvalitet, personlighet och
+              värme går hand i hand.
+              <br /><br />
+
+              <strong>Välkommen till oss.</strong>
+            </p>
+            <img src="images/omOss.webp" alt="Bild från La Bella Krog" />
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <!-- Samma container klass som i main -->
+      <div class="container">
+        <div class="socials">
+          <h3>La Bella Socials</h3>
+          <div class="socialknappar">
+            <!-- target="_blank" gör att länken öppnas i en ny flik -->
+            <a href="https://www.instagram.com/labellakrog/" target="_blank"
+              ><img src="images/instagram-logo.png.webp" alt="Instagram"
+            /></a>
+
+            <a
+              href="https://www.facebook.com/p/La-Bella-Krog-61571403852555/"
+              target="_blank"
+              ><img src="images/Facebook_Logo.png" alt="Facebook"
+            /></a>
+          </div>
+        </div>
+
+        <div class="öppettider">
+          <h3>Öppettider</h3>
+          <table>
+            <tr>
+              <td>Måndag - Torsdag</td>
+              <td>15:00 - 21:00</td>
+            </tr>
+
+            <tr>
+              <td>Fredag - Lördag</td>
+              <td>12:00 - 22:00</td>
+            </tr>
+
+            <tr>
+              <td>Söndag</td>
+              <td>12:00 - 21:00</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="kontakt">
+          <h3>Kontakt</h3>
+
+          <!-- tel: gör att telefon öppnar när man trycker -->
+          <a href="tel:+4640190190">+46 40 19 01 90</a>
+
+          <!-- mailto: gör att mail öppnar när man trycker -->
+          <a href="mailto:info@labella.se">info@labella.se</a>
+
+          <!-- Länk till adressen på Google Maps -->
+          <a
+            href="https://www.google.com/maps/dir/?api=1&destination=55.51725159999999,12.9978014"
+            target="_blank"
+          >
+            Tygelsjövägen 146, 218 72 Tygelsjö
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

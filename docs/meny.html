@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="keywords"
+      content="restaurang, krog, pub, plankstek, fotboll, Tygelsjö, mat, Vellinge, La Bella, öl, burgare, hamburgare"
+    />
+
+    <link rel="icon" href="images/logo.png" />
+    <link rel="stylesheet" href="style/style.css" />
+
+    <title>Meny | La Bella Krog</title>
+  </head>
+
+  <body>
+    <!-- Kopierade header från index.html eftersom den ska vara samma på alla sidor.
+         Ändrade Om oss länken så den går tillbaka till Om oss på index.html -->
+    <header>
+      <a href="index.html"><h1>La Bella Krog</h1></a>
+      <nav>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <ul>
+          <li><a href="meny.html">Meny</a></li>
+          <!-- Går först till index.html och sen till id="omoss" -->
+          <li><a href="index.html#omoss">Om oss</a></li>
+          <li><a href="boka.html">Boka</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <!-- div menyinfo för att samla hela menyn -->
+        <section class="menyinfo">
+          <h2>Upptäck Vår Meny</h2>
+          <section class="förrätter">
+            <h3>Förrätter</h3>
+            <!-- Samlar maträtterna här för att använda grid/flex, blev grid -->
+            <div class="grid-mat">
+              <!-- article för varje maträtt-->
+              <article class="maträtt">
+                <img
+                  src="images/nachos tallrik.jpg.webp"
+                  alt="Nachos tallrik"
+                />
+                <!-- Jag fick göra matinfo och pris i olika divs för att lyckas samla det som jag ville-->
+                <div class="matinfo">
+                  <h3>Nachostallrik</h3>
+                  <p>Köttfärs, ost, jalapeno, valfri sås</p>
+                  <p class="pris">99kr</p>
+                </div>
+              </article>
+
+              <article class="maträtt">
+                <img src="images/gambas-pil-pil.jpg" alt="Gambas Pil Pil" />
+                <div class="matinfo">
+                  <h3>Gambas Pil Pil</h3>
+                  <p>Heta räkor med chili, vitlök & olivolja</p>
+                  <p class="pris">135kr</p>
+                </div>
+              </article>
+
+              <article class="maträtt">
+                <img
+                  src="images/grillad-sparris-parmesan-citron.jpg"
+                  alt="Grillad sparris"
+                />
+                <div class="matinfo">
+                  <h3>Grillad Sparris</h3>
+                  <p>Med grana padano, citron & olivolja</p>
+                  <p class="pris">135kr</p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="varmrätter">
+            <h3>Varmrätter</h3>
+            <!-- Samma class så kan jag styla med samma .grid-mat -->
+            <div class="grid-mat">
+              <article class="maträtt">
+                <img src="images/plankstek.webp" alt="Plankstek" />
+                <div class="matinfo">
+                  <h3>Oxfiléplanka</h3>
+                  <p>
+                    Serveras med wokade grönsaker, tomat, lökringar.
+                    Bearnaisesås, pepparsås eller rödvinssås
+                  </p>
+                  <p class="pris">329kr</p>
+                </div>
+              </article>
+
+              <article class="maträtt">
+                <img src="images/burgare.webp" alt="Högrevsburgare" />
+                <div class="matinfo">
+                  <h3>Högrevsburgare</h3>
+                  <p>Originaldressing, lök, sallad, lökringar</p>
+                  <p class="pris">100gr 119kr</p>
+                  <p class="pris">200gr 149kr</p>
+                </div>
+              </article>
+
+              <article class="maträtt">
+                <img src="images/carbonara.jpeg" alt="Carbonara" />
+                <div class="matinfo">
+                  <h3>Carbonara</h3>
+                  <p>Bacon, skinka, grädde, riven parmesan, ruccola</p>
+                  <p class="pris">160kr</p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="desserter">
+            <h3>Desserter</h3>
+            <!-- Samma div igen -->
+            <div class="grid-mat">
+              <article class="maträtt">
+                <img src="images/chokladfondant.jpeg" alt="Chokladfondant" />
+                <div class="matinfo">
+                  <h3>Chokladfondant</h3>
+                  <p>Med vispgrädde eller vaniljglass</p>
+                  <p class="pris">65kr</p>
+                </div>
+              </article>
+
+              <article class="maträtt">
+                <img src="images/tiramisu.jpg.webp" alt="Tiramisu" />
+                <div class="matinfo">
+                  <h3>Tiramisu</h3>
+                  <p>
+                    Klassisk tiramisu kräm på en kaffe doppad botten av
+                    sockerkaka. Laktos och Glutenfri
+                  </p>
+                  <p class="pris">60kr</p>
+                </div>
+              </article>
+
+              <article class="maträtt">
+                <img src="images/marängsviss.jpeg" alt="Marängsviss" />
+                <div class="matinfo">
+                  <h3>Marängsviss</h3>
+                  <p>
+                    Vaniljglass, maränger, banan, vispad grädde och chokladsås
+                  </p>
+                  <p class="pris">70kr</p>
+                </div>
+              </article>
+            </div>
+          </section>
+        </section>
+      </div>
+    </main>
+
+    <!-- Kopierade footer från index.html eftersom samma kontakt
+         och öppettider ska finnas på alla sidor -->
+    <footer>
+      <!-- Samma container class som jag använder i main -->
+      <div class="container">
+        <div class="socials">
+          <h3>La Bella</h3>
+          <div class="socialknappar">
+            <!-- target="_blank" gör att länken öppnas i en ny flik -->
+            <a href="https://www.instagram.com/labellakrog/" target="_blank"
+              ><img src="images/instagram-logo.png.webp" alt="Instagram"
+            /></a>
+            <!-- Samma här öppnas i en ny flik -->
+            <a
+              href="https://www.facebook.com/p/La-Bella-Krog-61571403852555/"
+              target="_blank"
+              ><img src="images/Facebook_Logo.png" alt="facebook"
+            /></a>
+          </div>
+        </div>
+
+        <div class="öppettider">
+          <h3>Öppettider</h3>
+          <table>
+            <tr>
+              <td>Måndag - Torsdag</td>
+              <td>15:00 - 21:00</td>
+            </tr>
+
+            <tr>
+              <td>Fredag - Lördag</td>
+              <td>12:00 - 22:00</td>
+            </tr>
+
+            <tr>
+              <td>Söndag</td>
+              <td>12:00 - 21:00</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="kontakt">
+          <h3>Kontakt</h3>
+          <!-- tel: öppnar telefonappen när man trycker -->
+          <a href="tel:+4640190190"> +46 40 19 01 90 </a>
+          <!-- mailto: öppnar mailappen när man trycker -->
+          <a href="mailto:info@labella.se"> info@labella.se </a>
+          <a
+            href="https://www.google.com/maps/dir/?api=1&destination=55.51725159999999,12.9978014"
+            target="_blank"
+            >Tygelsjövägen 146, 218 72 Tygelsjö</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

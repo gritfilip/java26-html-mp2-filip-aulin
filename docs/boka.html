@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="keywords"
+      content="restaurang, krog, pub, plankstek, fotboll, Tygelsjö, mat, Vellinge, La Bella, öl, burgare, hamburgare"
+    />
+
+    <link rel="icon" href="images/logo.png" />
+    <link rel="stylesheet" href="style/style.css" />
+
+    <title>Boka bord | La Bella Krog</title>
+  </head>
+
+  <body>
+    <!-- Kopierat header ifrån index.html då jag vill använda samma på alla sidorna.
+         Men jag ändrade så att Om oss linken nu går tillbaka till Om oss på index.html -->
+    <header>
+      <a href="index.html"><h1>La Bella Krog</h1></a>
+      <nav>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <ul>
+          <li><a href="meny.html">Meny</a></li>
+          <!-- Går först till index.html och sen till id="omoss" -->
+          <li><a href="index.html#omoss">Om oss</a></li>
+          <li><a href="boka.html">Boka</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <!-- Hela delen för bordsbokningen -->
+        <section class="bordsbokning">
+          <h2>Boka Bord på La Bella</h2>
+
+          <!-- boknigsdel samlar allt som hör till bokningen -->
+          <form class="bokningsdel">
+            <label for="förnamn">Förnamn</label>
+            <input type="text" id="förnamn" name="förnamn" />
+
+            <label for="efternamn">Efternamn</label>
+            <input type="text" id="efternamn" name="efternamn" />
+
+            <label for="datum">Datum</label>
+            <input type="date" id="datum" name="datum" />
+
+            <label for="antal">Antal personer</label>
+            <input type="number" id="antal" name="antal" min="1" />
+
+            <label for="tid">Tid</label>
+            <input type="time" id="tid" name="tid" />
+
+            <label for="övrigt">Övriga önskemål</label>
+            <textarea id="övrigt" name="övrigt"></textarea>
+
+            <button type="submit">Boka Bord</button>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <!-- Kopierade footer från index.html eftersom samma kontakt
+         och öppettider ska finnas på alla sidor -->
+    <footer>
+      <!-- Samma container class som jag använder i main -->
+      <div class="container">
+        <div class="socials">
+          <h3>La Bella</h3>
+          <div class="socialknappar">
+            <!-- target="_blank" gör att länken öppnas i en ny flik -->
+            <a href="https://www.instagram.com/labellakrog/" target="_blank"
+              ><img src="images/instagram-logo.png.webp" alt="Instagram"
+            /></a>
+            <!-- Samma här öppnas i en ny flik -->
+            <a
+              href="https://www.facebook.com/p/La-Bella-Krog-61571403852555/"
+              target="_blank"
+              ><img src="images/Facebook_Logo.png" alt="Facebook"
+            /></a>
+          </div>
+        </div>
+
+        <div class="öppettider">
+          <h3>Öppettider</h3>
+          <table>
+            <tr>
+              <td>Måndag - Torsdag</td>
+              <td>15:00 - 21:00</td>
+            </tr>
+
+            <tr>
+              <td>Fredag - Lördag</td>
+              <td>12:00 - 22:00</td>
+            </tr>
+
+            <tr>
+              <td>Söndag</td>
+              <td>12:00 - 21:00</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="kontakt">
+          <h3>Kontakt</h3>
+          <!-- tel: öppnar telefon när man trycker -->
+          <a href="tel:+4640190190"> +46 40 19 01 90 </a>
+          <!-- mailto: öppnar mail när man trycker -->
+          <a href="mailto:info@labella.se"> info@labella.se </a>
+          <a
+            href="https://www.google.com/maps/dir/?api=1&destination=55.51725159999999,12.9978014"
+            target="_blank"
+            >Tygelsjövägen 146, 218 72 Tygelsjö</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
