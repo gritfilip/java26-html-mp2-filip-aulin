@@ -248,6 +248,11 @@ footer h3 {
   flex-direction: column;
 }
 
+.karta {
+  width: 50%;
+  margin: auto;
+}
+
 /* Jag bytte från en lista till table, fick lite problem med att avståndet blev stort */
 .öppettider table {
   line-height: 1.5rem;
@@ -277,7 +282,6 @@ footer h3 {
   color: var(--röd);
   cursor: pointer;
 }
-
 
 /* Meny sidan */
 
@@ -310,7 +314,7 @@ footer h3 {
 /* Egen grid för varje maträtt bilden till vänster och texten till höger */
 .maträtt {
   display: grid;
-  grid-template-columns: 200px 1fr; /* 200px till bilden och resten till texten */
+  grid-template-columns: 1fr 1fr; /* 200px till bilden och resten till texten */ /* Fick ändra till 1fr 1fr för det blev inte bra på mobilen */
   gap: 15px;
   border-bottom: 1px solid var(--mörkgron);
   padding-bottom: 30px;
@@ -400,7 +404,6 @@ footer h3 {
 /* Desktop */
 /* width >= 768px*/
 @media (min-width: 768px) {
-
   /* Tar bort hamburgaren */
   .menu-icon {
     display: none;
@@ -511,4 +514,8 @@ footer h3 {
   .slider-pilar {
     display: none;
   }
+
+  .karta {
+    width: 100%;
+    }
 }
